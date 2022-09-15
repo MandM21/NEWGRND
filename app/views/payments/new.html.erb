@@ -5,6 +5,7 @@
       <div class="payment-card-info">
       <p><strong>Payment for the following </strong></p>
       <%@order.cart_items.each do |item|%>
+        <p><%= item.product.designer.name %></p>
         <p><%= item.product.name %> x <%= item.quantity %></p>
         <p><%= humanized_money_with_symbol item.product.price * item.quantity %></p>
       <%end%>
